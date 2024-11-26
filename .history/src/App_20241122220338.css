@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 35px;
+}
+
+.header-h1 {
+    font-size: 24px;
+    font-family: 'Didot', serif;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.header-icon {
+    font-size: 28px;
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+}
+
+/* carousel */
+/* .carousel {
+    width: 1120px;
+    align-items: center;
+    height: auto;
+}
+.carousel .slide {
+    border-radius: 15px;
+}
+
+.carousel-container.slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+} */
+.home {
+    background: url(https://thumb.tildacdn.com/tild3066-3936-4632-a234-396433303631/-/format/webp/4.png) center center / cover no-repeat;
+    height: 550px;
+    width: 712px;
+    background: url(https://thumb.tildacdn.com/tild6566-3934-4561-b235-343237663134/-/format/webp/55.png) center center / cover no-repeat;
+    height: 378px;
+}

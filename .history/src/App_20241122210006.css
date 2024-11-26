@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 35px;
+  }
+  
+  .header-h1 {
+    font-size: 24px;
+    font: optional;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .phone {
+    font-size: 16px;
+    color: black;
+  }
+  
+  .nav{
+    margin-left: auto;
+  }
