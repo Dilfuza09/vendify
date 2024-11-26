@@ -1,11 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Для анимаций
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-[#F5F5F5] p-6 flex items-center justify-center">
       <div className="bg-white shadow-md rounded-lg max-w-4xl w-full p-8 relative">
-        {/* Заголовок страницы с анимацией */}
         <motion.h2
           className="text-4xl font-semibold text-gray-800 text-center mb-6 mt-6"
           initial={{ opacity: 0 }}
@@ -14,8 +13,6 @@ const About = () => {
         >
           About Us
         </motion.h2>
-
-        {/* Описание */}
         <motion.p
           className="text-lg text-gray-600 text-center mb-8"
           initial={{ opacity: 0 }}
@@ -27,10 +24,7 @@ const About = () => {
           designs. Our team is dedicated to making your experience smooth and
           memorable.
         </motion.p>
-
-        {/* Блок с изображением и текстом */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Левая часть с изображением */}
           <motion.div
             className="flex justify-center items-center"
             initial={{ opacity: 0 }}
@@ -43,8 +37,6 @@ const About = () => {
               className="rounded-lg shadow-lg"
             />
           </motion.div>
-
-          {/* Правая часть с текстом */}
           <motion.div
             className="flex flex-col justify-center"
             initial={{ opacity: 0 }}
@@ -59,8 +51,6 @@ const About = () => {
             </p>
           </motion.div>
         </div>
-
-        {/* Команда */}
         <motion.div
           className="mt-12 text-center"
           initial={{ opacity: 0 }}
@@ -69,7 +59,6 @@ const About = () => {
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Meet Our Team</h3>
           <div className="flex justify-center gap-6">
-            {/* Пример карточек команды */}
             <div className="flex flex-col items-center">
               <img
                 src="https://via.placeholder.com/100"

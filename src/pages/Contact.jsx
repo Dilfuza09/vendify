@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { toast, Toaster } from "react-hot-toast"; // Импорт Toast
+import { toast, Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     toast.success("Thank you! Your message has been sent.");
-    setFormData({ name: "", email: "", message: "" }); // Очистить форму
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -88,8 +88,6 @@ const Contact = () => {
             Send Message
           </button>
         </form>
-
-        {/* Декоративные элементы */}
         <div className="absolute -top-6 -left-6 w-16 h-16 bg-gray-200 rounded-full"></div>
         <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-gray-100 rounded-full"></div>
       </div>
