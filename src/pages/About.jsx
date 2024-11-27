@@ -65,7 +65,7 @@ const About = () => {
                 alt="Team Member"
                 className="w-24 h-24 rounded-full shadow-md mb-2"
               />
-              <h4 className="text-lg font-medium text-gray-800">John Doe</h4>
+              <h4 className="text-lg font-medium text-gray-800">Iroda</h4>
               <p className="text-sm text-gray-600">CEO & Founder</p>
             </div>
             <div className="flex flex-col items-center">
@@ -74,7 +74,7 @@ const About = () => {
                 alt="Team Member"
                 className="w-24 h-24 rounded-full shadow-md mb-2"
               />
-              <h4 className="text-lg font-medium text-gray-800">Jane Smith</h4>
+              <h4 className="text-lg font-medium text-gray-800">Dilfuza</h4>
               <p className="text-sm text-gray-600">Lead Developer</p>
             </div>
           </div>
