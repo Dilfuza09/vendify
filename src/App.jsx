@@ -23,6 +23,7 @@ function App() {
         <Route path="/register" element={<SingIn />} />
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/singup' element={<SingUp/>}/>
       </Routes>
       <Footer/>
       <Toaster />

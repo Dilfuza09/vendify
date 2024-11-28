@@ -97,7 +97,7 @@ const SingIn = () => {
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-300 focus:border-gray-400"
               placeholder="Enter your password"
             />
-            <div style={{textAlign:'center',marginTop:'30px'}}>Not a remember?<a href="#">Singup now</a></div>
+            <div style={{textAlign:'center',marginTop:'30px'}}>Not a remember?<a style={{color:'black',marginLeft:'10px'}} href="/singup">Singup now</a></div>
           </motion.div>
 
           <motion.button
