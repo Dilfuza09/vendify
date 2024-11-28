@@ -13,7 +13,7 @@ const Header = () => {
           <a href="#sale">Sale %</a>
           <a href="/Contact">Contact</a>
           <div className="header-icon">
-            <a href="/register"><FontAwesomeIcon icon={faUser} /></a>
+            <a href="/singin"><FontAwesomeIcon icon={faUser} /></a>
             <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
             <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
           </div>
