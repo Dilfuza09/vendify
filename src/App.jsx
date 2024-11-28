@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import SingUp from './register/SingUp';
 import About from './pages/About';
 import { Toaster } from 'react-hot-toast';
+import SingIn from './register/SingIn';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path='/sale' element={<Sale/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path="*" element={<NotFound />} />
-        <Route path="/register" element={<SingUp />} />
+        <Route path="/register" element={<SingIn />} />
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
