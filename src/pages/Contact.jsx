@@ -1,22 +1,36 @@
-import React, { useState } from "react";
-import { toast, Toaster } from "react-hot-toast";
+import axios from "axios";
+import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [data, setData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit_TgBot = async (e) => {
     e.preventDefault();
-    toast.success("Thank you! Your message has been sent.");
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const token = "7801231339:AAHps_08VL8cfTVcXZ8r5jAfvwTLw6C5E2M";
+      const chatID = "1921363553"; // заменить на правильный chatID
+      const sendMessage = `Name: ${data.name}; Email: ${data.email}; Message: ${data.message}`;
+      await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
+        chat_id: chatID,
+        text: sendMessage,
+      });
+      toast.success("Message sent successfully!");
+      setData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error: ", error);
+      toast.error("Failed to send the message. Please try again.");
+    }
   };
 
   return (
@@ -32,7 +46,7 @@ const Contact = () => {
           Have questions? Fill out the form and we’ll get back to you shortly.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit_TgBot}>
           <div className="relative">
             <label htmlFor="name" className="block text-sm text-gray-700 mb-2">
               Name
@@ -41,7 +55,7 @@ const Contact = () => {
               type="text"
               name="name"
               id="name"
-              value={formData.name}
+              value={data.name}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-300 focus:border-gray-400"
@@ -56,7 +70,7 @@ const Contact = () => {
               type="email"
               name="email"
               id="email"
-              value={formData.email}
+              value={data.email}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-300 focus:border-gray-400"
@@ -73,7 +87,7 @@ const Contact = () => {
             <textarea
               name="message"
               id="message"
-              value={formData.message}
+              value={data.message}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-300 focus:border-gray-400 resize-none"
@@ -83,6 +97,7 @@ const Contact = () => {
 
           <button
             type="submit"
+            value="Send"
             className="w-full py-3 bg-gray-800 text-white rounded-md font-semibold hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
           >
             Send Message

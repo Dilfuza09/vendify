@@ -1,4 +1,4 @@
-import { faFacebook, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook,  faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
@@ -13,7 +13,7 @@ const Header = () => {
           <a href="#sale">Sale %</a>
           <a href="/Contact">Contact</a>
           <div className="header-icon">
-            <a href="/singin"><FontAwesomeIcon icon={faUser} /></a>
+            <a href="#"><FontAwesomeIcon icon={faUser} /></a>
             <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
             <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
           </div>
