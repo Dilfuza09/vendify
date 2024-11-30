@@ -1,4 +1,4 @@
-import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import {  faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className='footer'>
         <div className="footer2">
           <div className="footer-icon">
-            <FontAwesomeIcon icon={faFacebookF} />
+            <a href="https://t.me/Vendify_shop_bot"><FontAwesomeIcon icon={faTelegram} /></a>
             <FontAwesomeIcon icon={faTwitter} />
             <FontAwesomeIcon icon={faInstagram} />
           </div>
