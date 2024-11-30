@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 
@@ -22,6 +23,9 @@ const SignIn = () => {
       toast.error("Please fill out all fields.");
     }
   };
+import { h1 } from 'framer-motion/client'
+import React from 'react'
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
@@ -93,5 +97,10 @@ const SignIn = () => {
     </div>
   );
 };
+  
+    <div>SingIn</div>
+  )
+}
+
 
 export default SignIn;
