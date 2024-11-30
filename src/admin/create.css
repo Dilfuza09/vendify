@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.create{
+    text-align: center;
+    padding: 40px 40px;
+}
+
+
+.create button{
+    border: none;
+    padding: 10px 50px; 
+    background-color: rgb(43, 43, 166);
+    color: white;
+    border-radius: 20px;
+
+}
+
+
+.create input{
+    border: 1px solid black;
+    padding: 10px 20px;
+}

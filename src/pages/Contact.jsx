@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const token = "7801231339:AAHps_08VL8cfTVcXZ8r5jAfvwTLw6C5E2M";
-      const chatID = "1921363553"; // заменить на правильный chatID
+      const chatID = "1921363553"; 
       const sendMessage = `Name: ${data.name}; Email: ${data.email}; Message: ${data.message}`;
       await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
         chat_id: chatID,
