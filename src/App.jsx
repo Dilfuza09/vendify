@@ -8,6 +8,8 @@ import Sale from './pages/Sale';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import { Toaster } from 'react-hot-toast';
+import Register from './register/Register';
+import SignIn from './register/SingIn';
 
 function App() {
   return (
@@ -15,13 +17,15 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/sale' element={<Sale/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/sale' element={<Sale />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path="*" element={<NotFound />} />
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/signin' element={<SignIn />} />
       </Routes>
-      <Footer/>
+      <Footer />
       <Toaster />
     </>
   );
