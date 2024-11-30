@@ -8,7 +8,6 @@ import Sale from './pages/Sale';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import { Toaster } from 'react-hot-toast';
-
 import Register from './register/Register';
 import SignIn from './register/SingIn';
 import Create from './admin/Create';
@@ -36,7 +35,6 @@ function App() {
         <Route path='/all' element={<All />} />
         <Route path='/edit' element={<Edit />} />
         <Route path='/info' element={<Info />} />
-
       </Routes>
       <Footer />
       <Toaster />
