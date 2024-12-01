@@ -14,7 +14,6 @@ const SignIn = () => {
           Sign In
         </motion.h2>
         <form className="space-y-6">
-          {/* Email Field */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-2">
               Email Address
@@ -27,8 +26,6 @@ const SignIn = () => {
               placeholder="Enter your email address"
             />
           </div>
-
-          {/* Password Field */}
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-600 mb-2">
               Password
@@ -49,7 +46,6 @@ const SignIn = () => {
               </a>
             </p>
           </div>
-          {/* Sign In Button */}
           <motion.button
             type="submit"
             className="w-full py-3 bg-gray-700 text-white rounded-md font-medium hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300"
@@ -57,12 +53,9 @@ const SignIn = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            Sign In
+            <a href="/home" style={{textDecoration:'none',color:'white'}}>Sign In</a>
           </motion.button>
         </form>
-
-        {/* Link to Registration Page */}
-
       </div>
     </div>
   );
