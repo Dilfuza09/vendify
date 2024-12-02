@@ -31,8 +31,8 @@ const Info = () => {
           </div>
           <div className="product-details" style={styles.details}>
             <h2 style={styles.title}>{user.title}</h2>
-            <h3 style={styles.price}>{user.price} сум</h3>
-            <Button variant="secondary" as={Link} to="/" style={styles.backButton}>Назад</Button>
+            <h3 style={styles.price}>{user.price} so'm</h3>
+            <Button variant="secondary" as={Link} to="/" style={styles.backButton}>Orqaga</Button>
           </div>
         </div>
       </div>

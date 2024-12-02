@@ -73,9 +73,10 @@ const Home = () => {
             </ul>
           </div>
           <div>
-            <h6>Availability</h6>
+            <h6>Availabilitys</h6>
             <h6><input type="checkbox" />Только товары в наличии</h6>
           </div>
+          
         </div>
         <div className="all" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {
