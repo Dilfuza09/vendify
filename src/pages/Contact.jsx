@@ -1,8 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
+import { useTranslation } from 'react-i18next'
+
 
 const Contact = () => {
+
+
+  const { t, i18n } = useTranslation();
+
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -40,16 +46,16 @@ const Contact = () => {
 
       <div className="bg-white shadow-md rounded-lg max-w-md w-full p-8 relative">
         <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">
-          Contact Us
+          {t('contact')}
         </h2>
         <p className="text-gray-600 text-center mb-6">
-          Have questions? Fill out the form and we’ll get back to you shortly.
+          {t('do')}
         </p>
 
         <form className="space-y-6" onSubmit={handleSubmit_TgBot}>
           <div className="relative">
             <label htmlFor="name" className="block text-sm text-gray-700 mb-2">
-              Name
+              {t('ism')}
             </label>
             <input
               type="text"
@@ -82,7 +88,7 @@ const Contact = () => {
               htmlFor="message"
               className="block text-sm text-gray-700 mb-2"
             >
-              Message
+              {t('mes')}
             </label>
             <textarea
               name="message"
@@ -100,7 +106,7 @@ const Contact = () => {
             value="Send"
             className="w-full py-3 bg-gray-800 text-white rounded-md font-semibold hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
           >
-            Send Message
+            {t('button')}
           </button>
         </form>
         <div className="absolute -top-6 -left-6 w-16 h-16 bg-gray-200 rounded-full"></div>

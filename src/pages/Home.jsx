@@ -4,6 +4,9 @@ import "./home.css"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import instance from "../axios";
+import { t } from "i18next";
+import { useTranslation } from 'react-i18next'
+
 
 const Home = () => {
   const [minValue, setMinValue] = useState(0);
@@ -19,6 +22,13 @@ const Home = () => {
   }
 
 
+  const { t, i18n } = useTranslation();
+
+
+
+  
+
+
   return (
     <>
       <div className="home">
@@ -26,22 +36,22 @@ const Home = () => {
         <img className='home-image' src="https://thumb.tildacdn.com/tild6566-3934-4561-b235-343237663134/-/format/webp/55.png" alt="" />
       </div>
       <div className="home-text">
-        <div className="home-p">Nice things for casual life created to <br /> bring you joy of usage</div>
+        <div className="home-p">{t('biz')}</div>
       </div>
 
       <div style={{ display: "flex",  gap: "100px" }}>
 
         <div className="check">
           <div>
-            <h6>Все</h6>
+            <h6>{t('hammasi')}</h6>
             <ul style={{ listStyle: "none" }}>
-              <li>Clock</li>
-              <li>Accessories</li>
-              <li>Home</li>
+              <li>{t('soat')}</li>
+              <li>{t('akk')}</li>
+              <li>{t('uy')}</li>
             </ul>
           </div>
           <div>
-            <h6>Price</h6>
+            <h6>{t('narx')}</h6>
             <div style={{ width: "100px", textAlign: "center" }}>
               <div style={{ alignItems: "center", display: "flex", width: "250px" }}>
                 <input
@@ -62,21 +72,21 @@ const Home = () => {
             <input type="number" />
           </div>
           <div>
-            <h6>Brand</h6>
+            <h6>Brend</h6>
             <ul style={{ listStyle: "none" }}>
-              <li> <input type="checkbox" style={{ marginRight: "10px" }} />Elton</li>
-              <li> <input type="checkbox" style={{ marginRight: "10px" }} />GeekCook</li>
-              <li> <input type="checkbox" style={{ marginRight: "10px" }} />Immany</li>
-              <li> <input type="checkbox" style={{ marginRight: "10px" }} />Lettuce Grow</li>
-              <li> <input type="checkbox" style={{ marginRight: "10px" }} />Makao</li>
-              <li> <input type="checkbox" style={{ marginRight: "10px" }} />Records</li>
+              <li> <input type="checkbox" style={{ marginRight: "10px" }} />{t('soft')}</li>
+              <li> <input type="checkbox" style={{ marginRight: "10px" }} />{t('taxta')}</li>
+              <li> <input type="checkbox" style={{ marginRight: "10px" }} />{t('mus')}</li>
+              <li> <input type="checkbox" style={{ marginRight: "10px" }} /> {t('yen')}</li>
+              <li> <input type="checkbox" style={{ marginRight: "10px" }} />{t('qu')}</li>
+              <li> <input type="checkbox" style={{ marginRight: "10px" }} />{t('kichik')}</li>
             </ul>
           </div>
           <div>
-            <h6>Availabilitys</h6>
-            <h6><input type="checkbox" />Только товары в наличии</h6>
+            <h6>{t('bor')}</h6>
+            <h6><input type="checkbox" />{t('mahsulotlar')}</h6>
           </div>
-          
+
         </div>
         <div className="all" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {

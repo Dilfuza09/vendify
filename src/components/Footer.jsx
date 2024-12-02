@@ -1,8 +1,15 @@
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+
 
 const Footer = () => {
+
+
+
+  const { t, i18n } = useTranslation();
+
   return (
     <>
       <footer className='footer'>
@@ -12,7 +19,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faTwitter} />
             <FontAwesomeIcon icon={faInstagram} />
           </div>
-          <div className="footer-text">Also follow us in social networks and visit <br /> our showroom in Bruxelles.</div>
+          <div className="footer-text">{t('foo')}</div>
           <div className="footer-tell">
             Rue Montagne du Parc 4. Bruxelles <br />
             Phone: +123 235 346 457

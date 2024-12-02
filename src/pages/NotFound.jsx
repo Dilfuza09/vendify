@@ -10,13 +10,14 @@ const NotFound = () => {
       fontFamily: 'Arial, sans-serif',
     }}>
       <h1 style={{ fontSize: '5em', color: '#333' }}>404</h1>
-      <h2 style={{ color: '#666' }}>Oops! Page not found.</h2>
-      <p style={{ color: '#888' }}>Sorry, the page you're looking for doesn't exist. Try checking the URL or go back to the homepage.</p>
+      <h2 style={{ color: '#666' }}>Voy! Sahifa topilmadi.
+      </h2>
+      <p style={{ color: '#888' }}>Kechirasiz, siz qidirayotgan sahifa mavjud emas. URL manzilini tekshirib ko'ring yoki bosh sahifaga qayting.</p>
       <a href="/" style={{
         textDecoration: 'none',
         color: '#007BFF',
         fontSize: '1.2em',
-      }}>Back to Home</a>
+      }}>Uyga qaytish</a>
     </div>
     </>
   )

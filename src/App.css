@@ -270,5 +270,19 @@
 }
 .header-h1 a{
     text-decoration: none;
+   
     color: #000;
 }
+
+
+.home-p{
+ width: 700px;
+ margin: 0 auto;
+}
+
+
+.footer-text{
+    width: 300px;
+    margin: 0 auto;
+}
+    
