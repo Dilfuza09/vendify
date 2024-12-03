@@ -1,106 +1,102 @@
-
-import { useState } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleSignIn = (e) => {
     e.preventDefault();
-    const { name, value } = e.target;
-    setData((prev) => ({ ...prev, [name]: value }));
-  };
+    const userData = JSON.parse(localStorage.getItem('user'));
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (data.email && data.password) {
-      toast.success("Signed in successfully!");
-      setData({ email: "", password: "" });
+    if (password === '1234') {
+      navigate('/all');
+    } else if (userData && userData.email === email && userData.password === password) {
+      navigate('/home');
     } else {
-      toast.error("Please fill out all fields.");
+      alert('Invalid email or password');
     }
   };
-import { h1 } from 'framer-motion/client'
-import React from 'react'
-
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-      {/* Компонент Toaster */}
-      <Toaster position="top-center" reverseOrder={false} />
-
-      <div className="bg-white shadow-lg rounded-lg max-w-sm w-full p-8 relative">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">
-          Sign In
-        </h2>
-        <p className="text-gray-600 text-center mb-6">
-          Please enter your credentials to sign in.
-        </p>
-
-        <form className="space-y-6" onSubmit={handleSubmit}>
-          <div className="relative">
-            <label htmlFor="email" className="block text-sm text-gray-600 mb-2">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+      <motion.div
+        className="bg-white shadow-lg rounded-lg max-w-md w-full p-8 border border-gray-300"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <motion.h1
+          className="text-3xl font-semibold text-gray-800 text-center mb-4"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Welcome to <span className="text-gray-600">Vendify</span>
+        </motion.h1>
+        <motion.p
+          className="text-sm text-gray-400 text-center mb-8"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+        >
+          Sign in to explore the best products just for you!
+        </motion.p>
+        <form onSubmit={handleSignIn} className="space-y-6">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-500 mb-2">
               Email Address
             </label>
-            <input
+            <motion.input
               type="email"
-              name="email"
               id="email"
-              value={data.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              placeholder="Enter your email address"
+              whileFocus={{ scale: 1.02 }}
+              whileHover={{ borderColor: '#A0AEC0' }}
             />
           </div>
-
-          <div className="relative">
-            <label
-              htmlFor="password"
-              className="block text-sm text-gray-600 mb-2"
-            >
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-500 mb-2">
               Password
             </label>
-            <input
+            <motion.input
               type="password"
-              name="password"
               id="password"
-              value={data.password}
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              placeholder="Enter your password"
+              whileFocus={{ scale: 1.02 }}
+              whileHover={{ borderColor: '#A0AEC0' }}
             />
           </div>
-
-          <button
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-400">
+              Don't have an account?{' '}
+              <a href="/register" className="text-gray-600 hover:underline">
+                Create one here
+              </a>
+            </p>
+          </div>
+          <motion.button
             type="submit"
-            className="w-full py-3 bg-gray-800 text-white rounded-md font-semibold hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full py-3 bg-gray-600 text-white rounded-md font-medium hover:bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-500"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Log In
-          </button>
+            Sign In
+          </motion.button>
         </form>
-
-        <div className="text-center mt-4">
-          <p className="text-sm text-gray-600">
-            Don't have an account?{" "}
-            <a
-              href="/register"
-              className="text-gray-800 font-medium hover:underline"
-            >
-              Register now
-            </a>
-          </p>
-        </div>  
-      </div>
+      </motion.div>
     </div>
   );
 };
-  
-    <div>SingIn</div>
-  )
-}
-
 
 export default SignIn;
