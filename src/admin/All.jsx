@@ -29,7 +29,7 @@ const All = () => {
         {
           products.map(value => {
             return (
-              <div key={value._id} style={{ backgroundColor: 'aqua', padding: '20px', margin: '10px', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+              <div className="nimadir" key={value._id} style={{ backgroundColor: 'aqua', padding: '20px', margin: '10px', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                 <img src={value.img} alt='' style={{borderRadius:'.5rem'}} />
                 <h3>Title: {value.title}</h3>
                 <h3> Price: {value.price} сум</h3>

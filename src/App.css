@@ -285,4 +285,16 @@
     width: 300px;
     margin: 0 auto;
 }
-    
+
+
+@media (max-width:1000px){
+    .nav a{
+        display: none;
+    }
+}
+  
+
+
+.nimadir img{
+width: 200px;
+}

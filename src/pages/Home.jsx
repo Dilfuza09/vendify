@@ -39,7 +39,7 @@ const Home = () => {
         <div className="home-p">{t('biz')}</div>
       </div>
 
-      <div style={{ display: "flex",  gap: "100px" }}>
+      <div style={{ display: "flex",  gap: "100px" }}    className="kotta">
 
         <div className="check">
           <div>
