@@ -34,10 +34,12 @@
 }
 
 .header-icon {
-    font-size: 28px;
     display: flex;
     cursor: pointer;
     gap: 10px;
+    a{
+        font-size: 27px;
+    }
 }
 
 .home {
@@ -272,29 +274,4 @@
     text-decoration: none;
    
     color: #000;
-}
-
-
-.home-p{
- width: 700px;
- margin: 0 auto;
-}
-
-
-.footer-text{
-    width: 300px;
-    margin: 0 auto;
-}
-
-
-@media (max-width:1000px){
-    .nav a{
-        display: none;
-    }
-}
-  
-
-
-.nimadir img{
-width: 200px;
 }
