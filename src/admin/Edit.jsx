@@ -27,7 +27,7 @@ const Edit = () => {
   return (
     <>
       <header className='header'>
-        <div className="header-h1"><b><a href="/">Vendify</a></b></div>
+        <div className="header-h1"><b><a href="/home">Vendify</a></b></div>
         <nav className='nav'>
           <a href="/about">About</a>
           <a href="#sale">Sale %</a>

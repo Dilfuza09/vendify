@@ -27,7 +27,7 @@ const All = () => {
   return (
     <>
       <header className='header'>
-        <div className="header-h1"><b><a href="/">Vendify</a></b></div>
+        <div className="header-h1"><b><a href="/home">Vendify</a></b></div>
         <nav className='nav'>
           <a href="/about">About</a>
           <a href="#sale">Sale %</a>
@@ -45,7 +45,7 @@ const All = () => {
             products.map(value => {
               return (
                 <div key={value._id} style={{ backgroundColor: 'aqua', padding: '20px', margin: '10px', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <img src={value.img} alt='' style={{ borderRadius: '.5rem' }} />
+                  <img src={value.img} alt='' style={{ borderRadius: '.5rem',width:'270px' }} />
                   <h3>Title: {value.title}</h3>
                   <h3> Price: {value.price} сум</h3>
 
