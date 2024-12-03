@@ -34,10 +34,12 @@
 }
 
 .header-icon {
-    font-size: 28px;
     display: flex;
     cursor: pointer;
     gap: 10px;
+    a{
+        font-size: 27px;
+    }
 }
 
 .home {

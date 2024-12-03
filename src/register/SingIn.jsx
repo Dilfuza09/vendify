@@ -1,10 +1,35 @@
-import { h1 } from 'framer-motion/client'
-import React from 'react'
-import { Toaster } from 'react-hot-toast';
+
+import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 
 const SignIn = () => {
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (data.email && data.password) {
+      toast.success("Signed in successfully!");
+      setData({ email: "", password: "" });
+    } else {
+      toast.error("Please fill out all fields.");
+    }
+  };
+import { h1 } from 'framer-motion/client'
+import React from 'react'
+
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+      {/* Компонент Toaster */}
       <Toaster position="top-center" reverseOrder={false} />
 
       <div className="bg-white shadow-lg rounded-lg max-w-sm w-full p-8 relative">
@@ -20,58 +45,56 @@ const SignIn = () => {
             <label htmlFor="email" className="block text-sm text-gray-600 mb-2">
               Email Address
             </label>
-            <input
+            <motion.input
               type="email"
-              name="email"
               id="email"
-              value={data.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              placeholder="Enter your email address"
+              whileFocus={{ scale: 1.02 }}
+              whileHover={{ borderColor: '#A0AEC0' }}
             />
           </div>
-
-          <div className="relative">
-            <label
-              htmlFor="password"
-              className="block text-sm text-gray-600 mb-2"
-            >
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-500 mb-2">
               Password
             </label>
-            <input
+            <motion.input
               type="password"
-              name="password"
               id="password"
-              value={data.password}
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              placeholder="Enter your password"
+              whileFocus={{ scale: 1.02 }}
+              whileHover={{ borderColor: '#A0AEC0' }}
             />
           </div>
-
-          <button
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-400">
+              Don't have an account?{' '}
+              <a href="/register" className="text-gray-600 hover:underline">
+                Create one here
+              </a>
+            </p>
+          </div>
+          <motion.button
             type="submit"
-            className="w-full py-3 bg-gray-800 text-white rounded-md font-semibold hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full py-3 bg-gray-600 text-white rounded-md font-medium hover:bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-500"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Log In
-          </button>
+            Sign In
+          </motion.button>
         </form>
-
-        <div className="text-center mt-4">
-          <p className="text-sm text-gray-600">
-            Don't have an account?{" "}
-            <a
-              href="/register"
-              className="text-gray-800 font-medium hover:underline"
-            >
-              Register now
-            </a>
-          </p>
-        </div>  
-      </div>
+      </motion.div>
     </div>
   );
 };
+  
    
 
 

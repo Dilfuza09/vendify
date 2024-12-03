@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import instance from "../axios"; 
+import instance from "../axios";
+import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const All = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -20,29 +22,57 @@ const All = () => {
   };
 
 
-  
+
 
   return (
     <>
-      <h1 style={{ textAlign: 'center' }}>All Product</h1>
-      <div className="all" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-        {
-          products.map(value => {
-            return (
-              <div key={value._id} style={{ backgroundColor: 'aqua', padding: '20px', margin: '10px', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                <img src={value.img} alt='' style={{borderRadius:'.5rem'}} />
-                <h3>Title: {value.title}</h3>
-                <h3> Price: {value.price} сум</h3>
+      <header className='header'>
+        <div className="header-h1"><b><a href="/">Vendify</a></b></div>
+        <nav className='nav'>
+          <a href="/about">About</a>
+          <a href="#sale">Sale %</a>
+          <a href="/Contact">Contact</a>
+          <div className="header-icon">
+            <a href="https://t.me/Vendify_shop_bot"><FontAwesomeIcon icon={faTelegram} /></a>
+            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+          </div>
+        </nav>
+      </header>
+      <div className="all">
+        <h1 style={{ textAlign: 'center' }}>All Product</h1>
+        <div className="all" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+          {
+            products.map(value => {
+              return (
+                <div key={value._id} style={{ backgroundColor: 'aqua', padding: '20px', margin: '10px', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                  <img src={value.img} alt='' style={{ borderRadius: '.5rem' }} />
+                  <h3>Title: {value.title}</h3>
+                  <h3> Price: {value.price} сум</h3>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', width: '100%' }}>
-                  <button onClick={() => editproduct(value._id)}>Edit</button>
-                  <button onClick={() => deleteProduct(value._id)}>Delete</button>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', width: '100%' }}>
+                    <button onClick={() => editproduct(value._id)}>Edit</button>
+                    <button onClick={() => deleteProduct(value._id)}>Delete</button>
+                  </div>
                 </div>
-              </div>
-            );
-          })
-        }
+              );
+            })
+          }
+        </div>
       </div>
+      <footer className='footer'>
+        <div className="footer2">
+          <div className="footer-icon">
+            <a href="https://t.me/Vendify_shop_bot"><FontAwesomeIcon icon={faTelegram} /></a>
+            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faInstagram} />
+          </div>
+          <div className="footer-text">Also follow us in social networks and visit <br /> our showroom in Bruxelles.</div>
+          <div className="footer-tell">
+            Rue Montagne du Parc 4. Bruxelles <br />
+            Phone: +123 235 346 457
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
