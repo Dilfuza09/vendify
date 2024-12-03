@@ -105,7 +105,7 @@ const Home = () => {
                   <Link to={`info/${value._id}`}><img style={{ width: "300px" }} className="dr" src={value.img} /></Link>
 
                   <div style={{ justifyContent: 'space-between', marginTop: '10px', width: '100%' }}>
-                    <h3 style={{ fontSize: "15px" }}>
+                    <h3 style={{ fontSize: "25px" }}>
                       <Link
                         to={`info/${value._id}`}
                         style={{ color: 'black', textDecoration: "none  " }}
@@ -115,7 +115,7 @@ const Home = () => {
                       </Link>
                     </h3>
                     <br /><br /><br />
-                    <h3 style={{ fontSize: "15px" }}>  ${value.price} </h3>
+                    <h3 style={{ fontSize: "20px" }}>  ${value.price} </h3>
                   </div>
                 </div>
               );
