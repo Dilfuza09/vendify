@@ -44,10 +44,10 @@ const All = () => {
           {
             products.map(value => {
               return (
-                <div key={value._id} style={{ backgroundColor: 'aqua', padding: '20px', margin: '10px', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                <div key={value._id} style={{ border:'1px solid black',borderRadius:'25px', padding: '20px', margin: '10px', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <img src={value.img} alt='' style={{ borderRadius: '.5rem',width:'270px' }} />
-                  <h3>Title: {value.title}</h3>
-                  <h3> Price: {value.price} сум</h3>
+                  <h3><b>Title: {value.title}</b></h3>
+                  <h3> <b>Price: {value.price} сум</b></h3>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', width: '100%' }}>
                     <button onClick={() => editproduct(value._id)}>Edit</button>

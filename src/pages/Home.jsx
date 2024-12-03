@@ -116,8 +116,6 @@ const Home = () => {
                     </h3>
                     <br /><br /><br />
                     <h3 style={{ fontSize: "15px" }}>  ${value.price} </h3>
-                    <button onClick={() => userDetails(value._id)} style={{ marginLeft: '230px' }}>Info</button>
-
                   </div>
                 </div>
               );
