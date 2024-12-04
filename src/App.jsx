@@ -12,10 +12,13 @@ import All from './admin/All';
 import Edit from './admin/Edit';
 import Info from './admin/Info';
 import SignIn from './register/SingIn';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
+    <Header/>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path='/sale' element={<Sale />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path='/info' element={<Info />} />
       </Routes>
       <Toaster />
+      <Footer/>
     </>
   );
 }
