@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <>
       <header className='header'>
-        <div className="header-h1"><b><a href="/home">Vendify</a></b></div>
+        <div className="header-h1"><b><a href="/">Vendify</a></b></div>
         <nav className='nav'>
           <a href="/about">About</a>
           <a href="#sale">Sale %</a>
@@ -105,7 +105,7 @@ const Home = () => {
                   <Link to={`info/${value._id}`}><img style={{ width: "300px" }} className="dr" src={value.img} /></Link>
 
                   <div style={{ justifyContent: 'space-between', marginTop: '10px', width: '100%' }}>
-                    <h3 style={{ fontSize: "25px" }}>
+                    <h3 style={{ fontSize: "15px" }}>
                       <Link
                         to={`info/${value._id}`}
                         style={{ color: 'black', textDecoration: "none  " }}
@@ -115,7 +115,9 @@ const Home = () => {
                       </Link>
                     </h3>
                     <br /><br /><br />
-                    <h3 style={{ fontSize: "20px" }}>  ${value.price} </h3>
+                    <h3 style={{ fontSize: "15px" }}>  ${value.price} </h3>
+                    <button onClick={() => userDetails(value._id)} style={{ marginLeft: '230px' }}>Info</button>
+
                   </div>
                 </div>
               );
