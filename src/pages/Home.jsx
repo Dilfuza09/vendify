@@ -17,6 +17,7 @@ const Home = () => {
   const userDetails = id => {
     navigate(`info/${id}`)
   }
+  
 
 
   return (

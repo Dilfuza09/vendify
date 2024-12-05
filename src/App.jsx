@@ -31,8 +31,8 @@ function App() {
           <Route path="/" element={<SignIn />} />
           <Route path="/create" element={<Create />} />
           <Route path="/all" element={<All />} />
-          <Route path="/edit" element={<Edit />} />
-          <Route path="/info" element={<Info />} />
+          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/info/:id" element={<Info />} />
         </Routes>
       <Toaster />
       {!hideHeaderFooter && <Footer />}

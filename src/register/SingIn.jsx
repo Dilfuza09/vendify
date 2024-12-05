@@ -5,20 +5,24 @@ import { useNavigate } from 'react-router-dom';
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    const userData = JSON.parse(localStorage.getItem('user'));
-
-    if (password === '1234') {
+    setError('');
+    if (email === 'iroda6638@gmail.com' && password === '1234') {
       navigate('/all');
-    } else if (userData && userData.email === email && userData.password === password) {
-      navigate('/home');
     } else {
-      alert('Invalid email or password');
+      const userData = JSON.parse(localStorage.getItem('user'));
+      if (userData && userData.email === email && userData.password === password) {
+        navigate('/home');
+      } else {
+        setError('Invalid email or password');
+      }
     }
   };
+
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
@@ -44,6 +48,7 @@ const SignIn = () => {
         >
           Sign in to explore the best products just for you!
         </motion.p>
+        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         <form onSubmit={handleSignIn} className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-500 mb-2">
@@ -55,7 +60,7 @@ const SignIn = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              className={`w-full px-4 py-3 rounded-md border ${error ? 'border-red-500' : 'border-gray-300'} bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500`}
               placeholder="Enter your email address"
               whileFocus={{ scale: 1.02 }}
               whileHover={{ borderColor: '#A0AEC0' }}
@@ -71,7 +76,7 @@ const SignIn = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              className={`w-full px-4 py-3 rounded-md border ${error ? 'border-red-500' : 'border-gray-300'} bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-500`}
               placeholder="Enter your password"
               whileFocus={{ scale: 1.02 }}
               whileHover={{ borderColor: '#A0AEC0' }}
