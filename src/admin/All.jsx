@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import instance from "../axios";
-import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const All = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();

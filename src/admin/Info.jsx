@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import instance from '../axios';
-import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Info = () => {
   const { id } = useParams();

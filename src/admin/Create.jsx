@@ -1,8 +1,6 @@
 import { useState } from "react"
 import instance from "../axios"
 import "./create.css"
-import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Create = () => {
 
     const [product, setProduct] = useState({

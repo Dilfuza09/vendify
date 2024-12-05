@@ -4,8 +4,6 @@ import "./home.css"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import instance from "../axios";
-import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home = () => {
   const [minValue, setMinValue] = useState(0);
@@ -90,22 +88,21 @@ const Home = () => {
                   flexDirection: 'column',
                   alignItems: 'flex-start',
                 }}>
-                  <Link to={`info/${value._id}`}><img style={{ width: "300px" }} className="dr" src={value.img} /></Link>
 
-                  <div style={{ justifyContent: 'space-between', marginTop: '10px', width: '100%' }}>
-                    <h3 style={{ fontSize: "15px" }}>
+                  <div style={{ justifyContent: 'space-between', marginTop: '10px', width: '100%',gridTemplateColumns:'auto auto auto auto' }}>
+                  <Link to={`info/${value._id}`}><img style={{ width: "300px" }} className="dr" src={value.img} /></Link><br />
+                    <h3 style={{ fontSize: "15px",}}>
+                      <b>
                       <Link
                         to={`info/${value._id}`}
                         style={{ color: 'black', textDecoration: "none  " }}
                       >
 
                         {value.title}
-                      </Link>
+                      </Link></b>
                     </h3>
-                    <br /><br /><br />
+                    <br />
                     <h3 style={{ fontSize: "15px" }}>  ${value.price} </h3>
-                    <button onClick={() => userDetails(value._id)} style={{ marginLeft: '230px' }}>Info</button>
-
                   </div>
                 </div>
               );

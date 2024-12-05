@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Contact = () => {
   const [data, setData] = useState({
     name: "",

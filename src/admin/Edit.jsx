@@ -2,8 +2,6 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import instance from "../axios"
 import "./edit.css"
-import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Edit = () => {
   const { id } = useParams()
