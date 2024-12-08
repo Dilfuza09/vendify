@@ -1,0 +1,103 @@
+.korzinka {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.korzinka1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    border: none;
+}
+
+.korzinka img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.korzinka p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.korzinka .price {
+    color: #555;
+    font-size: 16px;
+}
+
+.korzinka button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 30px;
+    transition: background-color 0.3s ease; 
+  }
+
+button {
+    padding: 5px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+
+
+
+.korzinka1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.korzinka1 p {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.korzinka1 button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.korzinka1 .quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.korzinka1 .quantity-controls button {
+    background-color: #f0ad4e;
+}
+
+.korzinka1 .quantity-controls span {
+    margin: 0 10px;
+    font-size: 18px;
+}

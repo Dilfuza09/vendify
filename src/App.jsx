@@ -14,6 +14,8 @@ import Info from './admin/Info';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SignIn from './register/SingIn';
+import Korzinka from './pages/Korzinka';
+import Buyurtma from './pages/Buyurtma';
 function App() {
   const location = useLocation();
   const hideHeaderFooter = location.pathname === '/register' || location.pathname === '/';
@@ -33,6 +35,8 @@ function App() {
           <Route path="/all" element={<All />} />
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/info/:id" element={<Info />} />
+          <Route path="/korzinka" element={<Korzinka />} />
+          <Route path="/buyurtma" element={<Buyurtma/>} />
         </Routes>
       <Toaster />
       {!hideHeaderFooter && <Footer />}

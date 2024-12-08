@@ -26,7 +26,7 @@ const Info = () => {
         <div className="product-info" style={styles.productInfo}>
           <div className="product-image" style={styles.imageContainer}>
             {user.img && (
-              <img src={user.img} alt={user.title} style={styles.image} />
+              <img src={user.img} alt={user.title} style={styles.image} />  
             )}
           </div>
           <div className="product-details" style={styles.details}>
